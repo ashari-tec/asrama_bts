@@ -186,8 +186,8 @@
     
     <div id="internet" class="tab-content active">
       <h2>Jadwal Bayar Internet</h2>
-      <h4>Note : 35000won</h4>
-      <h4>Rekening Bank Woori an Dianto Sigit</h4>
+      <h4>Tagihan : ₩35.000</h4>
+      <h4>Rekening Bank Woori a.n. Dianto Sigit</h4>
       <h4>1002448818992</h4>
       <div style="padding-top: 15px;" id="internet-schedule"></div>
     </div>
@@ -420,7 +420,7 @@ function generateCleaningSchedule() {
   const scheduleDiv = document.getElementById('cleaning-schedule');
   scheduleDiv.innerHTML = '';
 
-  const baseDate = new Date(2025, 0, 1);
+  const baseDate = new Date(2025, 0, 6);
   const msPerDay = 24 * 60 * 60 * 1000;
   const daysDiff = Math.floor((currentDate - baseDate) / msPerDay);
   const currentWeek = Math.floor(daysDiff / 7);

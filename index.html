@@ -170,6 +170,20 @@
       margin-bottom: 1rem;
       text-align: center;
     }
+
+/*.note {
+  background-color: #f9f9f9; /* Ubah warna latar belakang sesuai kebutuhan */
+ /* border-radius: 8px; /* Kelengkungan pada sudut */
+/*  padding: 10px 15px; /* Spasi di dalam elemen */
+/*  margin: 10px 0; /* Jarak dengan elemen lain */
+ /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Memberikan sedikit bayangan agar elemen lebih menonjol */
+}
+
+.note p {
+  margin: 0; /* Menghilangkan margin default pada paragraf */
+  font-weight: normal; /* Untuk menjaga konsistensi dengan h4 */
+}
+  
   </style>
 </head>
 <body>
@@ -185,12 +199,13 @@
     <div id="current-date" class="current-date"></div>
     
     <div id="internet" class="tab-content active">
-      <h2>Jadwal Bayar Internet</h2>
-      <h4>Tagihan : ₩35.000</h4>
-      <h4>Transfer ke Dianto Sigit</h4>
-      <h4>Bank Woori - 1002448818992</h4>
-      <div style="padding-top: 15px;" id="internet-schedule"></div>
-    </div>
+  <h2>Jadwal Bayar Internet</h2>
+  <div class="note">
+    <p>Tagihan: ₩35.000</p>
+    <p>Transfer ke: Woori 1002448818992 a.n. DIANTO SIGIT</p>
+  </div>
+  <div style="padding-top: 15px;" id="internet-schedule"></div>
+</div>
     
     <div id="receipt" class="tab-content">
       <h2>Jadwal Tukar Kuitansi Belanja</h2>
@@ -223,23 +238,23 @@
     // Data karyawan
     const employees = [
       'Hari', 'Ihsan', 'Dianto', 'Joko',
-      'Galang', 'Chandra', 'Fresa', 'Dika'
+      'Galang', 'Chandra', 'Fresa', 'Alif'
     ];
     // piket
 const employee = [
-      'Dianto', 'Chandra', 'Hari', 'Dika',
+      'Dianto', 'Chandra', 'Hari', 'Alif',
       'Fresa', 'Ihsan', 'Joko', 'Galang'
     ];
 
     //kuitansi
     const employe = [
-      'Dianto', 'Ihsan', 'Hari', 'Dika',
+      'Dianto', 'Ihsan', 'Hari', 'Alif',
       'Galang', 'Chandra', 'Fresa', 'Joko'
     ];
     
-    // Data karyawan pabrik (4 orang)
+    // Data karyawan pabrik (5 orang)
     const factoryEmployees = [
-      'Joko', 'Dika', 'Hari', 'Dianto'
+      'Joko', 'Qomar', 'Hari', 'Alif', 'Dianto'
     ];
     
     // Nama bulan dalam bahasa Indonesia
@@ -338,7 +353,7 @@ const employee = [
   const scheduleDiv = document.getElementById('factory-schedule');
   scheduleDiv.innerHTML = '';
 
-  // Menghitung minggu dari 1 Januari 2025 (mulai Senin)
+  // Menghitung minggu dari 6 Januari 2025 (mulai Senin)
   const baseDate = new Date(2025, 0, 6); // 6 Jan 2025 = Senin pertama
   const msPerDay = 24 * 60 * 60 * 1000;
   const daysDiff = Math.floor((currentDate - baseDate) / msPerDay);
